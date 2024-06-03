@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+  int jogador, computador;
+  printf("\n**********************************************\n");
+  printf("*** Bem Vindo ao Jogo pedra-papel-tesoura! ***\n");
+  printf("**********************************************\n");
+  printf("\nVc jogara contra o computador....");
+  printf("Escolha uma jogada: \n");
+  printf("1 - Tesoura\n" "2 - Papel\n" "3 - Pedra\n");
+  printf("\nSua Jogada: ");
+  scanf("%d", &jogador);
+  srand(time(NULL));
+    computador= 1 + ( rand() % 3 );
+  printf("O computador jogou: %d\n\n", computador);
+  if(jogador<1 || jogador>3){
+    printf("Jogada inválida!\n");
+  }
+  else{
+    if(jogador==computador){
+      printf("Empate!\n");
+    }
+    else{
+      if(jogador==1 && computador==2){
+        printf("Vc Venceu!!!\n");
+      }
+      if(jogador==1 && computador==3){
+        printf("Vc Perdeu!!!\n");
+      }
+      if(jogador==2 && computador==1){
+        printf("Vc Perdeu!!!\n");
+      }
+      if(jogador==2 && computador==3){
+        printf("Vc Venceu!!!\n");
+      }
+      if(jogador==3 && computador==1){
+        printf("Vc Venceu!!!\n");
+      }
+      if(jogador==3 && computador==2){
+      printf("Vc Perdeu!!!\n");
+      }
+    }
+  }
+  printf("Fim de Jogo.\n");
+}
