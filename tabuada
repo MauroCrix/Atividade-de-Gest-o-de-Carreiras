@@ -1,0 +1,21 @@
+#include <stdio.h>
+#define LINHAS 10 
+#define COLUNAS 2
+void tabuada(int num){  
+  int matriz[LINHAS][COLUNAS]; 
+  int i; 
+  for (i = 0; i < LINHAS; i++) {
+    matriz[i][0] = num * (i + 1); 
+    matriz[i][1] = num * (i + 1); 
+  } 
+  printf("\nTabuada de %d:\n", num); ; 
+  for (i = 0; i < LINHAS; i++){
+    printf("%d x %d = %d\n", num, i + 1, matriz[i][1]);} 
+} 
+int main() {
+int num; 
+printf("Digite um número inteiro: "); 
+scanf("%d", &num); 
+ tabuada(num); 
+ return 0;
+}
